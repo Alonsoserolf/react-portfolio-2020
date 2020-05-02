@@ -1,4 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+npx create-react-app alonso
+yarn add husky lint-staged prettier (git hooks and linter)
+yarn add react-bootstrap bootstrap (optional for style components)
+yarn add prop-types (optional type checking props)
+yarn add redux react-redux (state management)
+yarn add redux-saga
+yarn add react-router-dom
+yarn add styled-components (optional to create reusable style components)
+yarn add auth0-js (optional from oauth service)
 
 ## Available Scripts
 
