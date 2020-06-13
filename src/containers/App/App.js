@@ -4,9 +4,11 @@ import { Nav } from '../../components/Nav'
 import { PageBorder } from '../../components/PageBorder'
 import {routes} from '../../router'
 import {RouteWithSubRoutes} from '../../shared/lib/SubRouteHandler'
+import { useSelector, useDispatch } from 'react-redux';
+
 import './App.sass'
 
-function App() {
+function App({store}) {
   let [menuOpen, setMenuOpen] = useState(false)
   const openMenu = () => setMenuOpen(!menuOpen)
   return (

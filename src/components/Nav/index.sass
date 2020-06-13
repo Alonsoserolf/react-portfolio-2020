@@ -20,18 +20,12 @@
   box-align: center;
   align-items: center;
   @media (min-width: 767px)
-    // right: 40px;
     left: 40%;
-    // -webkit-box-orient: horizontal;
-    // -moz-box-orient: horizontal;
     box-orient: horizontal;
-    // -webkit-box-direction: normal;
-    // -moz-box-direction: normal;
     box-direction: normal;
     overflow: hidden;
     flex-direction: row;
   @media (min-width: 1600px)
-    // right: 55px;
     flex-direction: row;
   ul
     padding-left: 0;
@@ -49,21 +43,27 @@
   position: fixed;
   z-index: 101;
   font-weight: 700;
-  font-size: 20px;
-  height: 40px;
-  line-height: 40px;
+  top: 2px
   left: 40px;
   cursor: pointer;
   text-decoration: none;
   color: inherit;
+  cursor: pointer
+  transition: all 400ms ease-in
+  &:hover
+    // transition: all 900ms ease-in
+    color: #2bb1ff
+  @media (min-width: 767px)
+    font-size: 18px;
+    top: 10px
   @media (min-width: 1600px)
+    font-size: 20px;
     left: 55px;
+    top: 16px;
 .menu-button
-  // pointer-events: all;
   position: fixed;
   right: 28px;
   top: 25px;
-  // margin-left: -10px;
   text-align: center;
   font-size: 0px;
   z-index: 100;
@@ -72,11 +72,7 @@
   width: 45px;
   cursor: pointer;
   z-index: 1000;
-  // pointer-events: none;
-  // -webkit-transition: -webkit-transform 500ms cubic-bezier(0.7, 0, 0.3, 1) 0ms;
-  // -moz-transition: -moz-transform 500ms cubic-bezier(0.7, 0, 0.3, 1) 0ms;
   transition: transform 500ms cubic-bezier(0.7, 0, 0.3, 1) 0ms;
-  // background: white;
   border-radius: 25px;
   border: none;
   outline: none;
@@ -97,7 +93,7 @@
     border-radius: 0px;
   @media (min-width: 1600px)
     right: 55px;
-    top: 0;
+    top: 8px;
   .menu-icon
     display: block;
     position: absolute;
@@ -132,8 +128,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  // -webkit-transition: opacity 500ms cubic-bezier(1, 0, 0, 1) 0ms;
-  // -moz-transition: opacity 500ms cubic-bezier(1, 0, 0, 1) 0ms;
   transition: opacity 500ms cubic-bezier(1, 0, 0, 1) 0ms;
   z-index: 11;
   opacity: 0;
@@ -150,7 +144,14 @@
     @media (max-width: 767px)
       height: 21px;
       overflow: hidden;
-  .borders > *
-    transform: translate(0, 0%) scale(1) !important;
-    @media (min-width: 767px)
-      transform: translate(0, 0%) scale(2) !important;
+  .menu-icon
+    & > .bar
+      &:nth-child(1)
+        transform: rotate(45deg)
+        width: 20px
+      &:nth-child(2)
+        transform: rotate(-45deg)
+        width: 20px !important;
+        margin-top: -2px;
+      &:nth-child(3)
+        opacity: 0

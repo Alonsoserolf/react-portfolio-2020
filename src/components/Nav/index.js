@@ -10,7 +10,7 @@ export const Nav = ({ openMenu }) => (
       </div>
       <ul>
         {siteLinks.map((link, i) => (
-          <li key={i+link.name}>
+          <li key={i+link.name} onClick={openMenu} >
             <Link to={link.path}>{link.name}</Link>
           </li>
         ))}
@@ -26,7 +26,7 @@ export const Nav = ({ openMenu }) => (
         </i>
       </button>
     </header>
-    <div className="menu-bg">
+    <div className="menu-bg" onClick={openMenu}>
       <Link to="/" className="site-title text-white">AlONSO.</Link>
     </div>
   </Fragment>
